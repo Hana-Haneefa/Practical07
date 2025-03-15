@@ -6,6 +6,8 @@
 
 .dots {
     display: flex;
+    height: 20%;
+
 }
 
 .dot1, .dot2, .dot3 {
@@ -30,39 +32,99 @@
 .one {
     display: flex;
     width: 100%;
+    border: 2px solid red;
+    min-height: 100vh;
+
 }
 
 .left {
     width: 50%;
     padding: 20px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .right {
     width: 50%;
+    min-height: 100%;
 }
 
 .image {
     width: 100%;
+    padding: 20px;
 }
 
 .text {
     width: 80%;
     height: 50%;
-    position: absolute;
-    top: 200px;
-    left: 100px;
+    margin-left: 10vw;
+
 }
 
 h1 {
-    font-size: 50px;
-    margin-bottom: 30px;
+    font-size: 4vw;
+    margin-bottom: 5vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: red;
 }
 
 p {
-    font-size: 20px;
+    font-size: 2vw;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: justify;
+}
+
+@media screen and (max-width:1000px) {
+   .text {
+    min-width: 300px;
+   }
+
+   p {
+    font-size: 2vw;
+   }
+
+   h1 {
+    font-size: 5vw;
+   }
+
+   .right {
+    align-content: center;
+    padding: 20px;
+   }
+
+}
+
+@media screen and (max-width:800px) {
+   .left {
+    width: 100%;
+   }
+   
+}
+
+@media screen and (max-width:770px) {
+    p {
+        font-size: 15px;
+    }
+
+    .one {
+        flex-direction: column;
+    }
+
+    .right {
+        width: 100%;
+        /* align-content: center; */
+    }
+}
+
+@media screen and (max-width:400px) {
+    h1 {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+   .text {
+    min-width: 90%;
+
+   }
 }
